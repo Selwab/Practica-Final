@@ -13,4 +13,10 @@ public class ClientController : ControllerBase
     {
         _clientManager = clientManager;
     }
+
+    [HttpGet]
+    public List<Client> Get()
+    {
+        return _clientManager.GetAll();  
+    }
 }
