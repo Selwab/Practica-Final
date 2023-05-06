@@ -15,4 +15,21 @@ public class ClientManager
     {
         return _clients;
     }
+
+    public Client GetById(int ci)
+    {
+        if(ci < 0)
+        {
+            throw new Exception("CI invalid.");
+        }
+
+        Client clientFound = _clients.Find(client => client.CI == ci);
+
+        if(clientFound == null)
+        {
+            throw new Exception("Client not found.");
+        } 
+
+        return clientFound;  
+    }
 }
