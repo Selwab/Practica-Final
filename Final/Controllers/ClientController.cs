@@ -26,4 +26,11 @@ public class ClientController : ControllerBase
     {
         return _clientManager.GetById(ci);  
     }
+
+    [HttpPut]
+    [Route("{ci}")]
+    public Client Put([FromRoute] int ci, [FromBody]Client clientToUpdate)
+    {
+        return _clientManager.Update(ci,clientToUpdate.Name,clientToUpdate.LastName,clientToUpdate.SecondLastName,clientToUpdate.Address,clientToUpdate.Telephone);
+    }
 }
