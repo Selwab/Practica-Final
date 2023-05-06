@@ -19,4 +19,11 @@ public class ClientController : ControllerBase
     {
         return _clientManager.GetAll();  
     }
+
+    [HttpGet]
+    [Route("{ci}")]
+    public Client GetById([FromRoute] int ci)
+    {
+        return _clientManager.GetById(ci);  
+    }
 }
