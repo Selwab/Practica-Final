@@ -2,14 +2,14 @@ namespace UPB.CoreLogic.Models;
 
 public class Client
 {
-    public string Name;
-    public string LastName;
-    public string SecondLastName;
-    public int CI;
-    public string Address;
-    public int Telephone;
-    public int Ranking; //1-5
-    public string ClientID;
+    public string Name { get; set;}
+    public string LastName { get; set;}
+    public string SecondLastName { get; set;}
+    public int CI { get; set;}
+    public string Address { get; set;}
+    public int Telephone { get; set;}
+    public int Ranking { get; set;} //1-5
+    public string ClientID { get; set;}
     public Client(string Name, string LastName, string SecondLastName, int CI, string Address, int Telephone, int Ranking, string ClientID)
     {
         this.Name = Name;
