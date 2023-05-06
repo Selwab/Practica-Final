@@ -10,4 +10,9 @@ public class ClientManager
     {
         _clients = new List<Client>();
     }   
+
+    public List<Client> GetAll()
+    {
+        return _clients;
+    }
 }
