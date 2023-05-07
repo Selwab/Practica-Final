@@ -1,0 +1,64 @@
+2023-05-07 15:15:20.693 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-07 15:15:20.758 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-07 15:15:20.761 -04:00 [INF] Hosting environment: DEV
+2023-05-07 15:15:20.762 -04:00 [INF] Content root path: D:\UPB\Certificación1\Practica-Final-master\Final\
+2023-05-07 15:15:37.117 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger - -
+2023-05-07 15:15:37.175 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger - - - 301 0 - 60.8219ms
+2023-05-07 15:15:37.189 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-07 15:15:37.239 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 50.4248ms
+2023-05-07 15:15:37.425 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui.css - -
+2023-05-07 15:15:37.425 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-bundle.js - -
+2023-05-07 15:15:37.426 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-standalone-preset.js - -
+2023-05-07 15:15:37.448 -04:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-05-07 15:15:37.448 -04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-05-07 15:15:37.448 -04:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-05-07 15:15:37.452 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui.css - - - 200 143632 text/css 27.4116ms
+2023-05-07 15:15:37.454 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 28.9990ms
+2023-05-07 15:15:37.457 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 30.9858ms
+2023-05-07 15:15:37.880 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-07 15:15:37.910 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/favicon-32x32.png - -
+2023-05-07 15:15:37.911 -04:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-05-07 15:15:37.914 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/favicon-32x32.png - - - 200 628 image/png 4.0551ms
+2023-05-07 15:15:37.975 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 95.1667ms
+2023-05-07 15:19:23.927 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-07 15:19:23.932 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-07 15:19:23.944 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-07 15:19:23.956 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-07 15:19:23.969 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 10.8981ms
+2023-05-07 15:19:23.975 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-07 15:19:23.976 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 49.5881ms
+2023-05-07 15:19:25.075 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-07 15:19:25.077 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-07 15:19:25.080 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-07 15:19:25.083 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-07 15:19:25.085 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 2.0796ms
+2023-05-07 15:19:25.088 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-07 15:19:25.089 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 14.6834ms
+2023-05-07 15:19:31.552 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients/75234 - -
+2023-05-07 15:19:31.555 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.GetById (Final)'
+2023-05-07 15:19:31.568 -04:00 [INF] Route matched with {action = "GetById", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client GetById(Int32) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-07 15:19:31.580 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.GetById (Final) in 6.7592ms
+2023-05-07 15:19:31.584 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.GetById (Final)'
+2023-05-07 15:19:31.586 -04:00 [ERR] Sucedio el siguiente error: Client not found.
+System.Exception: Client not found.
+   at UPB.CoreLogic.Managers.ClientManager.GetById(Int32 ci) in D:\UPB\Certificación1\Practica-Final-master\CoreLogic\Managers\ClientManager.cs:line 32
+   at UPB.Final.Controllers.ClientController.GetById(Int32 ci) in D:\UPB\Certificación1\Practica-Final-master\Final\Controllers\ClientController.cs:line 27
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at UPB.Final.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\UPB\Certificación1\Practica-Final-master\Final\Middlewares\ExceptionHandlerMiddleware.cs:line 21
+2023-05-07 15:19:31.705 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients/75234 - - - 200 - text/json 152.4797ms
+2023-05-07 15:20:40.367 -04:00 [INF] Application is shutting down...
