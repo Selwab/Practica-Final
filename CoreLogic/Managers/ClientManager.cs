@@ -1,5 +1,6 @@
 using UPB.CoreLogic.Models;
 
+
 namespace UPB.CoreLogic.Managers;
 
 public class ClientManager
@@ -18,12 +19,13 @@ public class ClientManager
 
     public Client GetById(int ci)
     {
-        if(ci < 0)
+        if(ci <= 0)
         {
-            throw new Exception("CI invalid.");
+            throw new Exception("Invalid CI");
         }
 
-        Client clientFound = _clients.Find(client => client.CI == ci);
+        Client clientFound;
+        clientFound = _clients.Find(client => client.CI == ci);
 
         if(clientFound == null)
         {
@@ -35,11 +37,11 @@ public class ClientManager
 
     public Client Update(int ci, string name, string lastName, string secondLastName, string address, int telephone)
     {
-        if(ci < 0)
+        if(ci <= 0)
         {
-            throw new Exception("CI invalid.");
+            throw new Exception("Invalid CI");
         }
-        if(name == "" || lastName == "")
+        else if(name == "" || lastName == "")
         {
             throw new Exception("Name and LastName are mandatory.");
         }
