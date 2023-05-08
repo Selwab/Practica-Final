@@ -100,6 +100,15 @@ public class ClientManager
 
     public Client Create(string name, string lastName, string secondLastName, int ci, string address, int telephone)
     {
+        if(ci <= 0)
+        {
+            throw new Exception("Invalid CI");
+        }
+        else if(name == "" || lastName == "")
+        {
+            throw new Exception("Name and LastName are mandatory.");
+        }
+        
         int ranking = GetRanking();
         //string clientID = GenerateClientID(ci, name, lastName, secondLastName);
         string clientID = GetClientID(name, lastName, secondLastName, ci);

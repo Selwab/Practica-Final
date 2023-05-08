@@ -416,3 +416,100 @@ System.Exception: Client not found.
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at UPB.Final.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\certificacion\practice4\Final\Middlewares\ExceptionHandlerMiddleware.cs:line 21
 2023-05-08 02:43:31.798 -04:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5102/clients/789 - - - 200 - text/json 21.9888ms
+2023-05-08 02:45:50.077 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 02:45:50.080 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 2.6126ms
+2023-05-08 02:45:50.162 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 02:45:50.169 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.1444ms
+2023-05-08 02:46:08.025 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 156
+2023-05-08 02:46:08.026 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:46:08.029 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:46:08.048 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 17.2577ms
+2023-05-08 02:46:08.051 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:46:08.052 -04:00 [ERR] Sucedio el siguiente error: Index and length must refer to a location within the string. (Parameter 'length')
+System.ArgumentOutOfRangeException: Index and length must refer to a location within the string. (Parameter 'length')
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at UPB.CoreLogic.Managers.ClientManager.GetClientID(String name, String lastName, String secondLastName, Int32 ci) in C:\certificacion\practice4\CoreLogic\Managers\ClientManager.cs:line 97
+   at UPB.CoreLogic.Managers.ClientManager.Create(String name, String lastName, String secondLastName, Int32 ci, String address, Int32 telephone) in C:\certificacion\practice4\CoreLogic\Managers\ClientManager.cs:line 105
+   at UPB.Final.Controllers.ClientController.Post(Client clientToCreate) in C:\certificacion\practice4\Final\Controllers\ClientController.cs:line 26
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at UPB.Final.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\certificacion\practice4\Final\Middlewares\ExceptionHandlerMiddleware.cs:line 21
+2023-05-08 02:46:08.065 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 156 - 200 - text/json 39.9322ms
+2023-05-08 02:46:33.449 -04:00 [INF] Application is shutting down...
+2023-05-08 02:46:37.613 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 02:46:37.654 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 02:46:37.655 -04:00 [INF] Hosting environment: DEV
+2023-05-08 02:46:37.657 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 02:46:39.369 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 02:46:39.460 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 93.9300ms
+2023-05-08 02:46:39.551 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 02:46:39.698 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 147.5168ms
+2023-05-08 02:46:49.748 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 156
+2023-05-08 02:46:49.754 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:46:49.770 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:46:49.799 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 21.3947ms
+2023-05-08 02:46:49.806 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:46:49.809 -04:00 [ERR] Sucedio el siguiente error: Invalid CI
+System.Exception: Invalid CI
+   at UPB.CoreLogic.Managers.ClientManager.Create(String name, String lastName, String secondLastName, Int32 ci, String address, Int32 telephone) in C:\certificacion\practice4\CoreLogic\Managers\ClientManager.cs:line 105
+   at UPB.Final.Controllers.ClientController.Post(Client clientToCreate) in C:\certificacion\practice4\Final\Controllers\ClientController.cs:line 26
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at UPB.Final.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\certificacion\practice4\Final\Middlewares\ExceptionHandlerMiddleware.cs:line 21
+2023-05-08 02:46:49.857 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 156 - 200 - text/json 108.8774ms
+2023-05-08 02:47:02.193 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 158
+2023-05-08 02:47:02.197 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:47:02.199 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:47:02.208 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 2.7176ms
+2023-05-08 02:47:02.210 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:47:02.211 -04:00 [ERR] Sucedio el siguiente error: Name and LastName are mandatory.
+System.Exception: Name and LastName are mandatory.
+   at UPB.CoreLogic.Managers.ClientManager.Create(String name, String lastName, String secondLastName, Int32 ci, String address, Int32 telephone) in C:\certificacion\practice4\CoreLogic\Managers\ClientManager.cs:line 109
+   at UPB.Final.Controllers.ClientController.Post(Client clientToCreate) in C:\certificacion\practice4\Final\Controllers\ClientController.cs:line 26
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at UPB.Final.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\certificacion\practice4\Final\Middlewares\ExceptionHandlerMiddleware.cs:line 21
+2023-05-08 02:47:02.223 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 158 - 200 - text/json 30.0626ms
+2023-05-08 02:47:18.398 -04:00 [INF] Application is shutting down...
