@@ -66,6 +66,8 @@ public class ClientManager
             throw new Exception("Name and LastName are mandatory.");
         }
 
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
         Client clientFound = _clients.Find(client => client.CI == ci); 
 
         if(clientFound == null)
@@ -79,6 +81,9 @@ public class ClientManager
         clientFound.Address = address;
         clientFound.Telephone = telephone;
         clientFound.ClientID = GenerateClientID(ci, name, lastName, secondLastName);
+
+        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        File.WriteAllText(_path, updatedJsonFile);
 
         return clientFound;
     }
@@ -97,7 +102,7 @@ public class ClientManager
         {
             sln = secondLastName[0];
         }
-
-        return (n + ln + sln + "-" + ci);
+        string code = (n.ToString() + ln.ToString() + sln.ToString() + "-" + ci);
+        return code;
     }
 }
