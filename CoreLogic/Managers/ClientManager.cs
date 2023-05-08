@@ -138,7 +138,14 @@ public class ClientManager
         //string clientID = GenerateClientID(ci, name, lastName, secondLastName);
         string clientID = GetClientID(name, lastName, secondLastName, ci);
         Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
+        
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
         _clients.Add(createdClient);
+
+        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        File.WriteAllText(_path, updatedJsonFile);
+
         return createdClient;
     }
 
