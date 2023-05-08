@@ -119,7 +119,17 @@ public class ClientManager
 
     public Client Delete(int ci)
     {
+        if(ci <= 0)
+        {
+            throw new Exception("Invalid CI");
+        }
         int clientToDelteIdex = _clients.FindIndex(client => client.CI == ci);
+
+        if(clientToDelteIdex == -1)
+        {
+            throw new Exception("Client not found.");
+        } 
+
         Client clientToDelete = _clients[clientToDelteIdex];
         _clients.RemoveAt(clientToDelteIdex);
         return clientToDelete;
