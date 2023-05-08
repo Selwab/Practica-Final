@@ -39,4 +39,11 @@ public class ClientController : ControllerBase
     {
         return _clientManager.Update(ci,clientToUpdate.Name,clientToUpdate.LastName,clientToUpdate.SecondLastName,clientToUpdate.Address,clientToUpdate.Telephone);
     }
+
+    [HttpDelete]
+    [Route("{ci}")]
+    public Client Delete([FromRoute] int ci)
+    {
+        return _clientManager.Delete(ci);
+    }
 }
