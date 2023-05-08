@@ -543,3 +543,33 @@ System.Exception: Name and LastName are mandatory.
 2023-05-08 03:30:02.711 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
 2023-05-08 03:30:02.713 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 15.2991ms
 2023-05-08 03:30:10.173 -04:00 [INF] Application is shutting down...
+2023-05-08 03:41:05.379 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 03:41:05.424 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 03:41:05.427 -04:00 [INF] Hosting environment: DEV
+2023-05-08 03:41:05.428 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 03:41:07.034 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 03:41:07.136 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 105.0491ms
+2023-05-08 03:41:07.272 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 03:41:07.398 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.7919ms
+2023-05-08 03:41:10.158 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 03:41:10.165 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 03:41:10.173 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 03:41:10.185 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 03:41:10.195 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 15.0839ms
+2023-05-08 03:41:10.200 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 03:41:10.201 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 43.2284ms
+2023-05-08 03:41:20.311 -04:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5102/clients/456 - -
+2023-05-08 03:41:20.313 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Delete (Final)'
+2023-05-08 03:41:20.329 -04:00 [INF] Route matched with {action = "Delete", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Delete(Int32) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 03:41:20.339 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 03:41:20.342 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Delete (Final) in 10.1422ms
+2023-05-08 03:41:20.344 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Delete (Final)'
+2023-05-08 03:41:20.346 -04:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5102/clients/456 - - - 200 - application/json;+charset=utf-8 35.8199ms
+2023-05-08 03:41:24.837 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 03:41:24.839 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 03:41:24.841 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 03:41:24.845 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 03:41:24.848 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 3.9215ms
+2023-05-08 03:41:24.850 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 03:41:24.852 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 14.4690ms
+2023-05-08 03:41:43.763 -04:00 [INF] Application is shutting down...

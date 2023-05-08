@@ -164,15 +164,22 @@ public class ClientManager
         {
             throw new Exception("Invalid CI");
         }
-        int clientToDelteIdex = _clients.FindIndex(client => client.CI == ci);
 
-        if(clientToDelteIdex == -1)
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+        int clientToDeleteIndex = _clients.FindIndex(client => client.CI == ci); 
+
+        if(clientToDeleteIndex == -1)
         {
             throw new Exception("Client not found.");
         } 
 
-        Client clientToDelete = _clients[clientToDelteIdex];
-        _clients.RemoveAt(clientToDelteIdex);
+        Client clientToDelete = _clients[clientToDeleteIndex];
+        _clients.RemoveAt(clientToDeleteIndex);
+
+        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        File.WriteAllText(_path, updatedJsonFile);
+
         return clientToDelete;
     }
 }
