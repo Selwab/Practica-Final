@@ -1,5 +1,6 @@
 using UPB.CoreLogic.Models;
-
+using Microsoft.Extensions.Configuration;
+using System.Text.Json;
 
 namespace UPB.CoreLogic.Managers;
 
@@ -7,9 +8,24 @@ public class ClientManager
 {
     private List<Client> _clients;
 
-    public ClientManager()
+    private readonly string _path;
+
+    public ClientManager(IConfiguration configuration)
     {
         _clients = new List<Client>();
+        _path = configuration.GetSection("PathClients").Value;
+
+        string directory = Path.GetDirectoryName(_path);
+        if(!Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
+        if(!File.Exists(_path))
+        {
+            JsonElement json = JsonDocument.Parse("{}").RootElement;
+            File.WriteAllText(_path, json.ToString());
+        }
     }   
 
     public List<Client> GetAll()
