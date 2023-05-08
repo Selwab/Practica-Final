@@ -20,6 +20,12 @@ public class ClientController : ControllerBase
         return _clientManager.GetAll();  
     }
 
+    [HttpPut]
+    public Client Post([FromBody] Client clientToCreate)
+    {
+        return _clientManager.Create(clientToCreate.Name, clientToCreate.LastName, clientToCreate.SecondLastName, clientToCreate.CI, clientToCreate.Address, clientToCreate.Telephone);
+    }
+
     [HttpGet]
     [Route("{ci}")]
     public Client GetById([FromRoute] int ci)
