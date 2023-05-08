@@ -1,5 +1,6 @@
 using UPB.CoreLogic.Models;
-
+using Microsoft.Extensions.Configuration;
+using System.Text.Json;
 
 namespace UPB.CoreLogic.Managers;
 
@@ -7,13 +8,30 @@ public class ClientManager
 {
     private List<Client> _clients;
 
-    public ClientManager()
+    private readonly string _path;
+
+    public ClientManager(IConfiguration configuration)
     {
         _clients = new List<Client>();
+        _path = configuration.GetSection("PathClients").Value;
+
+        string directory = Path.GetDirectoryName(_path);
+        if(!Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
+        if(!File.Exists(_path))
+        {
+            JsonElement json = JsonDocument.Parse("[]").RootElement;
+            File.WriteAllText(_path, json.ToString());
+        }
     }   
 
     public List<Client> GetAll()
     {
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
         return _clients;
     }
 
@@ -24,8 +42,10 @@ public class ClientManager
             throw new Exception("Invalid CI");
         }
 
-        Client clientFound;
-        clientFound = _clients.Find(client => client.CI == ci);
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+
+        Client clientFound = _clients.Find(client => client.CI == ci);
 
         if(clientFound == null)
         {
@@ -46,6 +66,8 @@ public class ClientManager
             throw new Exception("Name and LastName are mandatory.");
         }
 
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
         Client clientFound = _clients.Find(client => client.CI == ci); 
 
         if(clientFound == null)
@@ -59,6 +81,9 @@ public class ClientManager
         clientFound.Address = address;
         clientFound.Telephone = telephone;
         clientFound.ClientID = GenerateClientID(ci, name, lastName, secondLastName);
+
+        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        File.WriteAllText(_path, updatedJsonFile);
 
         return clientFound;
     }
@@ -77,8 +102,8 @@ public class ClientManager
         {
             sln = secondLastName[0];
         }
-
-        return (n + ln + sln + "-" + ci);
+        string code = (n.ToString() + ln.ToString() + sln.ToString() + "-" + ci);
+        return code;
     }
 
     public string GetClientID(string name, string lastName, string secondLastName, int ci)
