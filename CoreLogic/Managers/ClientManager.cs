@@ -99,4 +99,11 @@ public class ClientManager
         return rankingOptions[index];
     }
 
+    public Client Delete(int ci)
+    {
+        int clientToDelteIdex = _clients.FindIndex(client => client.CI == ci);
+        Client clientToDelete = _clients[clientToDelteIdex];
+        _clients.RemoveAt(clientToDelteIdex);
+        return clientToDelete;
+    }
 }
