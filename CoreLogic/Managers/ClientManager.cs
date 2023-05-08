@@ -42,8 +42,10 @@ public class ClientManager
             throw new Exception("Invalid CI");
         }
 
-        Client clientFound;
-        clientFound = _clients.Find(client => client.CI == ci);
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+
+        Client clientFound = _clients.Find(client => client.CI == ci);
 
         if(clientFound == null)
         {
