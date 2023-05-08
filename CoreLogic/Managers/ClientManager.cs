@@ -6,13 +6,11 @@ namespace UPB.CoreLogic.Managers;
 
 public class ClientManager
 {
-    private List<Client> _clients;
-
     private readonly string _path;
 
     public ClientManager(IConfiguration configuration)
     {
-        _clients = new List<Client>();
+        List<Client> clients = new List<Client>();
         _path = configuration.GetSection("PathClients").Value;
 
         string directory = Path.GetDirectoryName(_path);
@@ -31,8 +29,8 @@ public class ClientManager
     public List<Client> GetAll()
     {
         string jsonFile = File.ReadAllText(_path);
-        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
-        return _clients;
+        List<Client> clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+        return clients;
     }
 
     public Client GetById(int ci)
@@ -43,9 +41,9 @@ public class ClientManager
         }
 
         string jsonFile = File.ReadAllText(_path);
-        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+        List<Client> clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
 
-        Client clientFound = _clients.Find(client => client.CI == ci);
+        Client clientFound = clients.Find(client => client.CI == ci);
 
         if(clientFound == null)
         {
@@ -67,8 +65,8 @@ public class ClientManager
         }
 
         string jsonFile = File.ReadAllText(_path);
-        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
-        Client clientFound = _clients.Find(client => client.CI == ci); 
+        List<Client> clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+        Client clientFound = clients.Find(client => client.CI == ci); 
 
         if(clientFound == null)
         {
@@ -80,30 +78,12 @@ public class ClientManager
         clientFound.SecondLastName = secondLastName;
         clientFound.Address = address;
         clientFound.Telephone = telephone;
-        clientFound.ClientID = GenerateClientID(ci, name, lastName, secondLastName);
+        clientFound.ClientID = GetClientID(name, lastName, secondLastName, ci);
 
-        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        string updatedJsonFile = JsonSerializer.Serialize(clients);
         File.WriteAllText(_path, updatedJsonFile);
 
         return clientFound;
-    }
-
-    private string GenerateClientID(int ci, string name, string lastName, string secondLastName)
-    {
-        char n = name[0];
-        char ln = lastName[0];
-        char sln;
-        
-        if(secondLastName == "")
-        {
-            sln = '_';
-        }
-        else
-        {
-            sln = secondLastName[0];
-        }
-        string code = (n.ToString() + ln.ToString() + sln.ToString() + "-" + ci);
-        return code;
     }
 
     public string GetClientID(string name, string lastName, string secondLastName, int ci)
@@ -139,9 +119,9 @@ public class ClientManager
         string clientID = GetClientID(name, lastName, secondLastName, ci);
 
         string jsonFile = File.ReadAllText(_path);
-        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+        List<Client> clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
 
-        foreach (Client client in _clients)
+        foreach (Client client in clients)
         {
             if (client.CI == ci)
             {
@@ -150,9 +130,9 @@ public class ClientManager
         }
 
         Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
-        _clients.Add(createdClient);
+        clients.Add(createdClient);
 
-        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        string updatedJsonFile = JsonSerializer.Serialize(clients);
         File.WriteAllText(_path, updatedJsonFile);
 
         return createdClient;
@@ -175,18 +155,18 @@ public class ClientManager
         }
 
         string jsonFile = File.ReadAllText(_path);
-        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
-        int clientToDeleteIndex = _clients.FindIndex(client => client.CI == ci); 
+        List<Client> clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+        int clientToDeleteIndex = clients.FindIndex(client => client.CI == ci); 
 
         if(clientToDeleteIndex == -1)
         {
             throw new Exception("Client not found.");
         } 
 
-        Client clientToDelete = _clients[clientToDeleteIndex];
-        _clients.RemoveAt(clientToDeleteIndex);
+        Client clientToDelete = clients[clientToDeleteIndex];
+        clients.RemoveAt(clientToDeleteIndex);
 
-        string updatedJsonFile = JsonSerializer.Serialize(_clients);
+        string updatedJsonFile = JsonSerializer.Serialize(clients);
         File.WriteAllText(_path, updatedJsonFile);
 
         return clientToDelete;
