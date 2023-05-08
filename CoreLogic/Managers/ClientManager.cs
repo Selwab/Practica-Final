@@ -80,4 +80,23 @@ public class ClientManager
 
         return (n + ln + sln + "-" + ci);
     }
+
+    public Client Create(string name, string lastName, string secondLastName, int ci, string address, int telephone)
+    {
+        int ranking = GetRanking();
+        string clientID = GenerateClientID(ci, name, lastName, secondLastName);
+        Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
+        _clients.Add(createdClient);
+        return createdClient;
+    }
+
+    public int GetRanking()
+    {
+        int[] rankingOptions = new int[] {1,2,3,4,5};
+        Random random = new Random();
+        int index = random.Next(0,rankingOptions.Length);
+        Console.WriteLine("Random: " + rankingOptions[index]);
+        return rankingOptions[index];
+    }
+
 }
