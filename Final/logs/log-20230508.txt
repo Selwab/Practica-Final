@@ -573,3 +573,46 @@ System.Exception: Name and LastName are mandatory.
 2023-05-08 03:41:24.850 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
 2023-05-08 03:41:24.852 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 14.4690ms
 2023-05-08 03:41:43.763 -04:00 [INF] Application is shutting down...
+2023-05-08 03:54:18.072 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 03:54:18.117 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 03:54:18.119 -04:00 [INF] Hosting environment: DEV
+2023-05-08 03:54:18.120 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 03:54:20.198 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 03:54:20.283 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 88.0035ms
+2023-05-08 03:54:20.382 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 03:54:20.487 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.0267ms
+2023-05-08 03:54:24.987 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 03:54:24.994 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 03:54:25.003 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 03:54:25.016 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 03:54:25.027 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 15.4102ms
+2023-05-08 03:54:25.030 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 03:54:25.031 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 43.3993ms
+2023-05-08 03:54:36.619 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 170
+2023-05-08 03:54:36.621 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 03:54:36.635 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 03:54:36.654 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 16.712ms
+2023-05-08 03:54:36.656 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 03:54:36.657 -04:00 [ERR] Sucedio el siguiente error: The CI: 456 already exists.
+System.Exception: The CI: 456 already exists.
+   at UPB.CoreLogic.Managers.ClientManager.Create(String name, String lastName, String secondLastName, Int32 ci, String address, Int32 telephone) in C:\certificacion\practice4\CoreLogic\Managers\ClientManager.cs:line 148
+   at UPB.Final.Controllers.ClientController.Post(Client clientToCreate) in C:\certificacion\practice4\Final\Controllers\ClientController.cs:line 26
+   at lambda_method4(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at UPB.Final.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\certificacion\practice4\Final\Middlewares\ExceptionHandlerMiddleware.cs:line 21
+2023-05-08 03:54:36.698 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 170 - 200 - text/json 78.7748ms
+2023-05-08 03:54:45.666 -04:00 [INF] Application is shutting down...

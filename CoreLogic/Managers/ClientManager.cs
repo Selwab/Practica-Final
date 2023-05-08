@@ -137,10 +137,19 @@ public class ClientManager
         int ranking = GetRanking();
         //string clientID = GenerateClientID(ci, name, lastName, secondLastName);
         string clientID = GetClientID(name, lastName, secondLastName, ci);
-        Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
-        
+
         string jsonFile = File.ReadAllText(_path);
         _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
+
+        foreach (Client client in _clients)
+        {
+            if (client.CI == ci)
+            {
+                throw new Exception("The CI: " + ci + " already exists.");
+            }
+        }
+
+        Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
         _clients.Add(createdClient);
 
         string updatedJsonFile = JsonSerializer.Serialize(_clients);
