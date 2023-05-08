@@ -7,3 +7,215 @@
 2023-05-08 00:56:08.691 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
 2023-05-08 00:56:08.805 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.8754ms
 2023-05-08 00:58:00.657 -04:00 [INF] Application is shutting down...
+2023-05-08 01:41:57.395 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 01:41:57.442 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 01:41:57.445 -04:00 [INF] Hosting environment: DEV
+2023-05-08 01:41:57.447 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 01:42:00.029 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 01:42:00.114 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 87.0756ms
+2023-05-08 01:42:00.225 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 01:42:00.347 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 121.6829ms
+2023-05-08 01:42:43.975 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:42:43.983 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:42:43.995 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:42:44.007 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:42:44.016 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 10.5664ms
+2023-05-08 01:42:44.022 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:42:44.023 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 48.2324ms
+2023-05-08 01:43:22.458 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 180
+2023-05-08 01:43:22.460 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:43:22.473 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:43:22.493 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 01:43:22.498 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 22.8556ms
+2023-05-08 01:43:22.502 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:43:22.503 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 180 - 200 - application/json;+charset=utf-8 45.3743ms
+2023-05-08 01:43:25.011 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:43:25.013 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:43:25.015 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:43:25.019 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:43:25.027 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 6.3744ms
+2023-05-08 01:43:25.031 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:43:25.058 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 46.2471ms
+2023-05-08 01:49:23.733 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 180
+2023-05-08 01:49:23.734 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:49:23.736 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:49:23.740 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 01:49:23.743 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 5.1968ms
+2023-05-08 01:49:23.745 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:49:23.747 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 180 - 200 - application/json;+charset=utf-8 13.9158ms
+2023-05-08 01:49:30.490 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:49:30.492 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:49:30.494 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:49:30.498 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:49:30.500 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 2.6823ms
+2023-05-08 01:49:30.504 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:49:30.506 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 15.8167ms
+2023-05-08 01:50:53.152 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 01:50:53.155 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 2.4760ms
+2023-05-08 01:50:53.337 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 01:50:53.342 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.3834ms
+2023-05-08 01:50:57.819 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:50:57.821 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:50:57.823 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:50:57.826 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:50:57.829 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 3.2293ms
+2023-05-08 01:50:57.830 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:50:57.831 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 12.1712ms
+2023-05-08 01:51:35.727 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 176
+2023-05-08 01:51:35.729 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:51:35.730 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:51:35.734 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 01:51:35.736 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 3.2181ms
+2023-05-08 01:51:35.739 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:51:35.741 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 176 - 200 - application/json;+charset=utf-8 14.1382ms
+2023-05-08 01:51:41.928 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:51:41.929 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:51:41.930 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:51:41.934 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:51:41.937 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 2.5397ms
+2023-05-08 01:51:41.940 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:51:41.942 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 14.0272ms
+2023-05-08 01:53:21.204 -04:00 [INF] Application is shutting down...
+2023-05-08 01:53:27.082 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 01:53:27.128 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 01:53:27.130 -04:00 [INF] Hosting environment: DEV
+2023-05-08 01:53:27.132 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 01:53:29.782 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 01:53:29.870 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 90.1426ms
+2023-05-08 01:53:29.969 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 01:53:30.120 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.7106ms
+2023-05-08 01:53:39.690 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:53:39.697 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:53:39.712 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:53:39.724 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:53:39.732 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 14.0809ms
+2023-05-08 01:53:39.739 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:53:39.741 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 51.7725ms
+2023-05-08 01:54:06.146 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 178
+2023-05-08 01:54:06.148 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:54:06.159 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:54:06.185 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 01:54:06.188 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 25.2671ms
+2023-05-08 01:54:06.190 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:54:06.191 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 178 - 200 - application/json;+charset=utf-8 44.7073ms
+2023-05-08 01:54:08.889 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:54:08.891 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:54:08.893 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:54:08.898 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:54:08.901 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 3.358ms
+2023-05-08 01:54:08.904 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:54:08.906 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 16.2093ms
+2023-05-08 01:54:37.483 -04:00 [INF] Application is shutting down...
+2023-05-08 01:54:41.198 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 01:54:41.236 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 01:54:41.238 -04:00 [INF] Hosting environment: DEV
+2023-05-08 01:54:41.239 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 01:54:43.661 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 01:54:43.746 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 87.9130ms
+2023-05-08 01:54:43.832 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 01:54:43.938 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.3755ms
+2023-05-08 01:54:52.048 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:54:52.055 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:54:52.064 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:54:52.074 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:54:52.082 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 10.6747ms
+2023-05-08 01:54:52.087 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:54:52.088 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 40.5929ms
+2023-05-08 01:55:17.686 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 180
+2023-05-08 01:55:17.687 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:55:17.700 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:55:17.720 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 01:55:17.723 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 19.26ms
+2023-05-08 01:55:17.724 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 01:55:17.725 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 180 - 200 - application/json;+charset=utf-8 38.6567ms
+2023-05-08 01:55:20.833 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 01:55:20.834 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:55:20.836 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 01:55:20.842 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 01:55:20.845 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 3.3347ms
+2023-05-08 01:55:20.847 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 01:55:20.849 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 16.6373ms
+2023-05-08 01:56:18.151 -04:00 [INF] Application is shutting down...
+2023-05-08 02:05:36.480 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 02:05:36.524 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 02:05:36.525 -04:00 [INF] Hosting environment: DEV
+2023-05-08 02:05:36.526 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 02:05:38.684 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 02:05:38.772 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 89.9541ms
+2023-05-08 02:05:38.860 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 02:05:38.980 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.4804ms
+2023-05-08 02:05:49.549 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 02:05:49.555 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:05:49.563 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:05:49.573 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 02:05:49.583 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 12.6881ms
+2023-05-08 02:05:49.592 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:05:49.594 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 45.4547ms
+2023-05-08 02:06:19.279 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 169
+2023-05-08 02:06:19.280 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:06:19.294 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:06:19.318 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 02:06:19.321 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 23.3501ms
+2023-05-08 02:06:19.323 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:06:19.325 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 169 - 200 - application/json;+charset=utf-8 45.3982ms
+2023-05-08 02:06:21.594 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 02:06:21.596 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:06:21.597 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:06:21.601 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 02:06:21.605 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 4.1345ms
+2023-05-08 02:06:21.608 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:06:21.609 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 15.0288ms
+2023-05-08 02:07:10.636 -04:00 [INF] Application is shutting down...
+2023-05-08 02:07:13.853 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 02:07:13.893 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 02:07:13.895 -04:00 [INF] Hosting environment: DEV
+2023-05-08 02:07:13.896 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 02:07:35.036 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 02:07:35.119 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 85.1491ms
+2023-05-08 02:07:35.208 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 02:07:35.318 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.7359ms
+2023-05-08 02:07:38.376 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 02:07:38.382 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:07:38.392 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:07:38.400 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 02:07:38.410 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 11.4575ms
+2023-05-08 02:07:38.413 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:07:38.414 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 38.1959ms
+2023-05-08 02:07:56.836 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 170
+2023-05-08 02:07:56.837 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:07:56.850 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:07:56.871 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 02:07:56.875 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 20.7049ms
+2023-05-08 02:07:56.876 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:07:56.877 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 170 - 200 - application/json;+charset=utf-8 41.2706ms
+2023-05-08 02:07:59.201 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 02:07:59.202 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:07:59.204 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:07:59.207 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 02:07:59.211 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 3.4329ms
+2023-05-08 02:07:59.213 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:07:59.215 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 13.8052ms
+2023-05-08 02:08:13.958 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5102/clients application/json 165
+2023-05-08 02:08:13.960 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:08:13.962 -04:00 [INF] Route matched with {action = "Post", controller = "Client"}. Executing controller action with signature UPB.CoreLogic.Models.Client Post(UPB.CoreLogic.Models.Client) on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:08:13.968 -04:00 [INF] Executing ObjectResult, writing value of type 'UPB.CoreLogic.Models.Client'.
+2023-05-08 02:08:13.970 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Post (Final) in 4.3945ms
+2023-05-08 02:08:13.973 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Post (Final)'
+2023-05-08 02:08:13.975 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5102/clients application/json 165 - 200 - application/json;+charset=utf-8 16.6742ms
+2023-05-08 02:08:16.742 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/clients - -
+2023-05-08 02:08:16.744 -04:00 [INF] Executing endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:08:16.745 -04:00 [INF] Route matched with {action = "Get", controller = "Client"}. Executing controller action with signature System.Collections.Generic.List`1[UPB.CoreLogic.Models.Client] Get() on controller UPB.Final.Controllers.ClientController (Final).
+2023-05-08 02:08:16.750 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UPB.CoreLogic.Models.Client, CoreLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-08 02:08:16.753 -04:00 [INF] Executed action UPB.Final.Controllers.ClientController.Get (Final) in 3.0068ms
+2023-05-08 02:08:16.755 -04:00 [INF] Executed endpoint 'UPB.Final.Controllers.ClientController.Get (Final)'
+2023-05-08 02:08:16.757 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/clients - - - 200 - application/json;+charset=utf-8 14.4481ms
+2023-05-08 02:08:53.339 -04:00 [INF] Application is shutting down...
+2023-05-08 02:14:34.103 -04:00 [INF] Now listening on: http://localhost:5102
+2023-05-08 02:14:34.158 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-08 02:14:34.160 -04:00 [INF] Hosting environment: DEV
+2023-05-08 02:14:34.161 -04:00 [INF] Content root path: C:\certificacion\practice4\Final\
+2023-05-08 02:14:41.888 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/index.html - -
+2023-05-08 02:14:41.971 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/index.html - - - 200 - text/html;charset=utf-8 85.0251ms
+2023-05-08 02:14:42.079 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - -
+2023-05-08 02:14:42.197 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.0955ms
+2023-05-08 02:14:45.032 -04:00 [INF] Application is shutting down...

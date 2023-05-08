@@ -81,10 +81,28 @@ public class ClientManager
         return (n + ln + sln + "-" + ci);
     }
 
+    public string GetClientID(string name, string lastName, string secondLastName, int ci)
+    {
+        string clientCI = Convert.ToString(ci);
+        string code = "";
+        string secondLN = "";
+        if(secondLastName == "")
+        {
+            secondLN = "_";
+        }
+        else
+        {
+            secondLN = secondLastName.Substring(0,1);
+        }
+        code += name.Substring(0,1) + lastName.Substring(0,1) + secondLN + "-" + clientCI;
+        return code;
+    }
+
     public Client Create(string name, string lastName, string secondLastName, int ci, string address, int telephone)
     {
         int ranking = GetRanking();
-        string clientID = GenerateClientID(ci, name, lastName, secondLastName);
+        //string clientID = GenerateClientID(ci, name, lastName, secondLastName);
+        string clientID = GetClientID(name, lastName, secondLastName, ci);
         Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
         _clients.Add(createdClient);
         return createdClient;
