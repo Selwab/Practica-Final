@@ -20,6 +20,12 @@ public class ClientController : ControllerBase
         return _clientManager.GetAll();  
     }
 
+    [HttpPut]
+    public Client Post([FromBody] Client clientToCreate)
+    {
+        return _clientManager.Create(clientToCreate.Name, clientToCreate.LastName, clientToCreate.SecondLastName, clientToCreate.CI, clientToCreate.Address, clientToCreate.Telephone);
+    }
+
     [HttpGet]
     [Route("{ci}")]
     public Client GetById([FromRoute] int ci)
@@ -32,5 +38,12 @@ public class ClientController : ControllerBase
     public Client Put([FromRoute] int ci, [FromBody]Client clientToUpdate)
     {
         return _clientManager.Update(ci,clientToUpdate.Name,clientToUpdate.LastName,clientToUpdate.SecondLastName,clientToUpdate.Address,clientToUpdate.Telephone);
+    }
+
+    [HttpDelete]
+    [Route("{ci}")]
+    public Client Delete([FromRoute] int ci)
+    {
+        return _clientManager.Delete(ci);
     }
 }
