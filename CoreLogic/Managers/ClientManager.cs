@@ -23,13 +23,15 @@ public class ClientManager
 
         if(!File.Exists(_path))
         {
-            JsonElement json = JsonDocument.Parse("{}").RootElement;
+            JsonElement json = JsonDocument.Parse("[]").RootElement;
             File.WriteAllText(_path, json.ToString());
         }
     }   
 
     public List<Client> GetAll()
     {
+        string jsonFile = File.ReadAllText(_path);
+        _clients = JsonSerializer.Deserialize<List<Client>>(jsonFile);
         return _clients;
     }
 
