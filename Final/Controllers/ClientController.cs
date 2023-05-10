@@ -48,4 +48,11 @@ public class ClientController : ControllerBase
     {
         return _clientManager.Delete(ci);
     }
+
+    [HttpGet]
+    [Route("external-clients")]
+    public Task<List<Client>> GetExternalClients()
+    {
+        return _clientManager.GetExternalClients(_httpClient);
+    }
 }
