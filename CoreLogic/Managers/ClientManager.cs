@@ -7,11 +7,13 @@ namespace UPB.CoreLogic.Managers;
 public class ClientManager
 {
     private readonly string _path;
+    private readonly string _backingService;
 
     public ClientManager(IConfiguration configuration)
     {
         List<Client> clients = new List<Client>();
         _path = configuration.GetSection("PathClients").Value;
+        _backingService = configuration.GetSection("BackingService").Value;
 
         string directory = Path.GetDirectoryName(_path);
         if(!Directory.Exists(directory))
@@ -53,7 +55,7 @@ public class ClientManager
         return clientFound;  
     }
 
-    public Client Update(int ci, string name, string lastName, string secondLastName, string address, int telephone)
+    public Client Update(int ci, string name, string lastName, string secondLastName, string address, string telephone)
     {
         if(ci <= 0)
         {
@@ -103,7 +105,7 @@ public class ClientManager
         return code;
     }
 
-    public Client Create(string name, string lastName, string secondLastName, int ci, string address, int telephone)
+    public Client Create(string name, string lastName, string secondLastName, int ci, string address, string telephone)
     {
         if(ci <= 0)
         {
@@ -143,7 +145,6 @@ public class ClientManager
         int[] rankingOptions = new int[] {1,2,3,4,5};
         Random random = new Random();
         int index = random.Next(0,rankingOptions.Length);
-        Console.WriteLine("Random: " + rankingOptions[index]);
         return rankingOptions[index];
     }
 
@@ -170,5 +171,24 @@ public class ClientManager
         File.WriteAllText(_path, updatedJsonFile);
 
         return clientToDelete;
+    }
+
+    public async Task<List<Client>> GetExternalClients(HttpClient _httpClient)
+    {
+        var response = await _httpClient.GetAsync(_backingService);
+
+        response.EnsureSuccessStatusCode();
+
+        string json = await response.Content.ReadAsStringAsync();
+
+        List<ExternalClient> externalClients = JsonSerializer.Deserialize<List<ExternalClient>>(json);
+        List<Client> clients = new List<Client>();
+
+        foreach (ExternalClient ec in externalClients)
+        {
+            clients.Add(new Client(ec.first_name,ec.last_name,"",ec.id,$"{ec.address.street_name}, {ec.address.city}, {ec.address.state}",ec.phone_number,GetRanking(),GetClientID(ec.first_name,ec.last_name,"",ec.id)));
+        }
+
+        return clients;
     }
 }
