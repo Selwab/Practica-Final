@@ -8,10 +8,12 @@ namespace UPB.Final.Controllers;
 [Route("clients")]
 public class ClientController : ControllerBase
 {
+    private readonly HttpClient _httpClient;
     private readonly ClientManager _clientManager;
-    public ClientController(ClientManager clientManager)
+    public ClientController(ClientManager clientManager, HttpClient httpClient)
     {
         _clientManager = clientManager;
+        _httpClient = httpClient;
     }
 
     [HttpGet]
