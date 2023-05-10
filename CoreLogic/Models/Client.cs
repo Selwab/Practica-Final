@@ -7,10 +7,10 @@ public class Client
     public string SecondLastName { get; set;}
     public int CI { get; set;}
     public string Address { get; set;}
-    public int Telephone { get; set;}
+    public string Telephone { get; set;}
     public int Ranking { get; set;} //1-5
     public string ClientID { get; set;}
-    public Client(string Name, string LastName, string SecondLastName, int CI, string Address, int Telephone, int Ranking, string ClientID)
+    public Client(string Name, string LastName, string SecondLastName, int CI, string Address, string Telephone, int Ranking, string ClientID)
     {
         this.Name = Name;
         this.LastName = LastName;
