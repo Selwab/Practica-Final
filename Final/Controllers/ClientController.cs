@@ -39,7 +39,8 @@ public class ClientController : ControllerBase
 
     [HttpPut]
     [Route("{ci}")]
-    public Client Put([FromRoute] int ci, [FromBody]Client clientToUpdate)
+    [SwaggerRequestExample(null, typeof(ClientUpdateModel))]
+    public Client Put([FromRoute] int ci, [FromBody]ClientUpdateModel clientToUpdate)
     {
         return _clientManager.Update(ci,clientToUpdate.Name,clientToUpdate.LastName,clientToUpdate.SecondLastName,clientToUpdate.Address,clientToUpdate.Telephone);
     }
