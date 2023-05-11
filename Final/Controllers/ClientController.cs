@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Filters;
 using UPB.CoreLogic.Managers;
 using UPB.CoreLogic.Models;
 
 namespace UPB.Final.Controllers;
 
 [ApiController]
-[Route("clients")]
+[Route("[controller]")]
 public class ClientController : ControllerBase
 {
     private readonly HttpClient _httpClient;
@@ -23,7 +24,8 @@ public class ClientController : ControllerBase
     }
 
     [HttpPost]
-    public Client Post([FromBody] Client clientToCreate)
+    [SwaggerRequestExample(null, typeof(ClientCreateModel))]
+    public Client Post([FromBody] ClientCreateModel clientToCreate)
     {
         return _clientManager.Create(clientToCreate.Name, clientToCreate.LastName, clientToCreate.SecondLastName, clientToCreate.CI, clientToCreate.Address, clientToCreate.Telephone);
     }
