@@ -75,9 +75,9 @@ public class ClientManager
             throw new Exception("Client not found.");
         }
 
-        clientFound.Name = name;
-        clientFound.LastName = lastName;
-        clientFound.SecondLastName = secondLastName;
+        clientFound.Name = capitalize(name);
+        clientFound.LastName = capitalize(lastName);
+        clientFound.SecondLastName = capitalize(secondLastName);
         clientFound.Address = address;
         clientFound.Telephone = telephone;
         clientFound.ClientID = GetClientID(name, lastName, secondLastName, ci);
@@ -131,7 +131,7 @@ public class ClientManager
             }
         }
 
-        Client createdClient = new Client(name, lastName, secondLastName, ci, address, telephone, ranking, clientID);
+        Client createdClient = new Client(capitalize(name), capitalize(lastName), capitalize(secondLastName), ci, address, telephone, ranking, clientID);
         clients.Add(createdClient);
 
         string updatedJsonFile = JsonSerializer.Serialize(clients);
@@ -190,5 +190,16 @@ public class ClientManager
         }
 
         return clients;
+    }
+    public static String capitalize(String palabra)
+    {
+        if (string.IsNullOrEmpty(palabra))
+        {
+            return palabra;
+        }
+        string firstChar = palabra.Substring(0, 1).ToUpper();
+        string restOfStr = palabra.Substring(1).ToLower();
+        
+        return firstChar + restOfStr;
     }
 }
