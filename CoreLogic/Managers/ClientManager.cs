@@ -99,9 +99,9 @@ public class ClientManager
         }
         else
         {
-            secondLN = secondLastName.Substring(0,1);
+            secondLN = secondLastName.Substring(0,1).ToUpper();
         }
-        code += name.Substring(0,1) + lastName.Substring(0,1) + secondLN + "-" + clientCI;
+        code += name.Substring(0,1).ToUpper() + lastName.Substring(0,1).ToUpper() + secondLN + "-" + clientCI;
         return code;
     }
 
